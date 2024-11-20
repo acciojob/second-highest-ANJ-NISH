@@ -9,8 +9,30 @@
 <body>	
 	<script>
 		function secondHighest(arr) {
-			//Write your code here
-			
+
+			let slarg=-Infinity;
+
+			if(arr.length===0)
+			{
+				return slarg;
+			}
+			let larg=arr[0];
+
+			for(let i=1;i<arr.length;i++)
+				{
+					if(arr[i]>larg)
+					{
+						slarg=larg;
+						larg=arr[i];
+					}
+					else if(arr[i]<larg && arr[i]>slarg)
+					{
+						slarg=arr[i];
+					}
+				}
+
+			return slarg;
+		    
 		}
 
 		function Main() {
@@ -18,8 +40,8 @@
 			var arr = [];
 			for (var i = 0; i < n; i++) {
 				arr[i] = prompt("Enter element " + (i+1));
-			}
-			alert(secondHighest(arr));
+			}https://www.svgrepo.com/show/345223/three-dots-vertical.svg
+			// alert(secondHighest(arr));
 		}
 		Main();
 	</script>
